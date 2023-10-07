@@ -18,7 +18,7 @@ const initialState = [
 
 export const TodoApp = () => {
 
-  const [todos, dispatch] = useReducer(todoReducer, initialState); //nota: primer parametro es el reducer, y el otro es el estado
+  const [todos, dispatch] = useReducer(todoReducer, initialState);
 
   const handleNewTodo = ( todo ) => {
     console.log('Recogiendo el valor emitido', {todo});
