@@ -23,7 +23,7 @@ export const TodoAdd = ({onNewTodo}) => {
       description
     }
 
-    onNewTodo(newTodo); //Emitir un valor al padre
+    onNewTodo(newTodo);
     onResetForm();
   }
 
