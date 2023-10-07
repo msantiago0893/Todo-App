@@ -4,17 +4,16 @@ const initialState = [{
   done: false
 }];
 
-const todoReducer = (state = initialState, action = {}) => { // Estructura de un reducer, (= {}) se indica esto cuando no se pasa ningun action
+const todoReducer = (state = initialState, action = {}) => {
 
   if (action.type === '[TODO] add todo') {
-    // state.push(action.payload); //No deberia hacerse eso, pro que no se deberia mutar el state directamente
-    return [...state, action.payload]; //hago la destructuracion del estado, y añado el nuevo elemento del payload
+    return [...state, action.payload];
   }
 
   return state;
 }
 
-let todos = todoReducer();   // llamada del reducer
+let todos = todoReducer();
 
 const newTodo = {
   id: 2,
@@ -26,7 +25,6 @@ const addTodoAction = {
   type: '[TODO] add todo',
   payload: newTodo
 }
-todos = todoReducer(todos, addTodoAction );  // realizando la llamada del reducer y asignarlo a la variable todos
-
+todos = todoReducer(todos, addTodoAction );
 
 console.log('todos -> ', {state: todos});
