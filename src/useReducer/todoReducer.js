@@ -1,11 +1,11 @@
 
-export const todoReducer = (initialState = [], action) => {//se respeta le orden de parametros (state, action)
+export const todoReducer = (initialState = [], action) => {
 
   switch (action.type) {
     case '[TODO] Add todo':
       return [ ...initialState, action.payload];
 
-    case '[TODO] Delete todo':  //avces mover algo aqu, para que refresque por que pareciera que no funciona
+    case '[TODO] Delete todo':
       return initialState.filter(item => item.id !== action.payload);
 
     default:
