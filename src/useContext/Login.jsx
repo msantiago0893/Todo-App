@@ -3,11 +3,10 @@ import { UserContext } from './context/userContext';
 
 export const Login = () => {
 
-  {/* Aqui obtengo el valor que estoy pasando por contexto */}
   const data  = useContext(UserContext);
   console.log('Data: ', data);
 
-  const { user, setUser }  = useContext(UserContext); {/* Destructuro lo que requiero del context */}
+  const { user, setUser }  = useContext(UserContext);
   return (
     <>
     <h1>LOGIN</h1>
